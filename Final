@@ -1,0 +1,172 @@
+from rich import print
+from rich.panel import Panel
+from rich.progress import track
+from rich.prompt import Prompt
+import time
+
+score = 0
+print("Welcome to the Financial Literacy Quiz!")
+
+time.sleep(1)
+
+input("Press Enter to continue...")
+
+print("")
+
+for letter in "This quiz will test your knowledge of financial literacy concepts and skills. You will be presented  with a lesson on each topic, and you will be asked to complete a quiz at the end. Your score will be calculated and displayed.":
+    print(letter, end="", flush=True)
+    time.sleep(0.05)
+
+time.sleep(1)
+print()
+print()
+
+time.sleep(2)
+print()
+
+print(Panel("[bold blue]꧁༺ 𝓑 𝓤 𝓓 𝓖 𝓔 𝓣 𝓘 𝓝 𝓖 ༻꧂[/bold blue]", title="[bold]Learn[/bold]", width=60))
+time.sleep(2)
+print()
+for letter in "Budgeting is a process of creating a plan for how you will spend your money. It helps you track your income and expenses,  and makes sure you have enough money to cover your needs and wants.":
+  print(letter,end="", flush=True)
+  time.sleep(0.01)
+
+print()
+time.sleep(2)
+print()
+print("To create a budget, you'll need to:")
+time.sleep(1)
+print("☆ Track your income and expenses")
+time.sleep(1)
+print("☆ Set financial goals")
+time.sleep(1)
+print("☆ Allocate your money to different categories")
+time.sleep(1)
+print("☆ Monitor your progress and make adjustments as needed")
+print()
+time.sleep(2)
+print("There are many different budgeting methods, so find one that works best for you.")
+print()
+time.sleep(2)
+
+print(Panel("[bold blue] IᑎᐯEᔕTIᑎG[/bold blue]", title="[bold]Learn[/bold]", width=60))
+time.sleep(2)
+print()
+for letter in "Investing is the buying of a share of a company with the aim of growth of your share. Or, buying an asset ,like a house for example, and holding it over time for it to appreciate in value ":
+  print(letter,end="", flush=True)
+  time.sleep(0.03)
+print()
+time.sleep(2)
+print()
+print("To make the right investment with low risk:")
+time.sleep(1)
+print("☆ Consider the company's market value")
+time.sleep(1)
+print("☆ Consider the company's growth potential")
+time.sleep(1)
+print("☆ Consider the company's risk")
+time.sleep(1)
+print("☆ Consider the company's sector")
+time.sleep(1)
+print("☆ Consider the company's reputation")
+time.sleep(1)
+print()
+time.sleep(2)
+
+af = input("Do you understand everything so far? : ")
+if af == "yes":
+  print("Great!")
+  time.sleep(1)
+else:
+  print("Budgeting is basically a plan deciding how to efficiently spend your money while investing is putting your money in a company/asset to make it grow.")
+  time.sleep(1)
+
+print(Panel("[bold blue] 𝐬𝐚𝐯𝐢𝐧𝐠 [/bold blue]", title="[bold]Learn[/bold]", width=60))
+time.sleep(2)
+print()
+for letter in "Saving is the process of putting money into a bank account or a savings account. It helps you to keep track of your money  and to make sure you have enough money to cover your needs and wants." :
+  print(letter,end="", flush=True)
+  time.sleep(0.03)
+print()
+time.sleep(2)
+print()
+print("To save money, you'll need to:")
+time.sleep(1)
+print("☆ Track your income and expenses")
+time.sleep(1)
+print("☆ Set financial goals to know how much you want to save")
+time.sleep(1)
+time.sleep(1)
+print("☆ Monitor your spending and make adjustments accordingly")
+print()
+time.sleep(2)
+
+print(Panel("[bold blue] QUIZ [/bold blue]", width=60))
+time.sleep(2)
+print()
+print("Q1. What is the purpose of a budget?")
+time.sleep(1)
+print()
+ans = input("Answer :")
+if "track your expenses" in ans or "track income" in ans or "track" in ans:
+  time.sleep(1)
+  print("Correct!")
+  score += 1
+else:
+  time.sleep(1)
+  print("It is to track your income and expenses")
+
+print()
+time.sleep(1)
+
+print("Q2. What is the purpose of investing?")
+time.sleep(1)
+print()
+answ = input("Answer : ")
+if "share" in answ or "growth" in answ or "grow" in answ or "asset" in answ:
+  time.sleep(1)
+  print("Correct!")
+  score += 1
+else:
+  time.sleep(1)
+  print("It is to buy a share of a company with the aim of growth of your share.")
+
+
+print()
+time.sleep(1)
+
+print("Q3. What is the purpose of saving money?")
+print()
+time.sleep(1)
+answe = input("Answer : ")
+if "keep track" in answe or "track" in answe:
+  time.sleep(1)
+  print("Correct!")
+  score += 1
+else:
+  time.sleep(1)
+  print("It is to keep track of your money and to make sure you have enough money to cover your needs and wants.")
+
+print()
+time.sleep(1)
+
+print("Q4. Estimate the percentage of your income you should use for leisure. ")
+time.sleep(1)
+print()
+ano = input("Answer: ")
+if int(ano) <= 15:
+  time.sleep(1)
+  print("Correct!")
+  score += 1
+else:
+  time.sleep(1)
+  print("You should allocate less than 15% of your income for leisure. ")
+print()
+time.sleep(2)
+print("calculating score...")
+for i in range(3):
+    print(".", end="", flush=True)
+    time.sleep(0.5)
+print("\b\b\b", end="", flush=True)
+time.sleep(1)
+print("Congratulations! You have completed the Financial Literacy Quiz. Your score is", score, "out of 4.")
